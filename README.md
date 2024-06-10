@@ -1,11 +1,12 @@
-#IUCNN installation 
+****#IUCNN installation ***
+
 install.packages("devtools")
 library(usethis)
 library(devtools)
 install.packages(IUCNN)
 library(IUCNN)
 
-#Python library installation using reticulate from within R
+**#Python library installation using reticulate from within R**
 
 install.packages("reticulate")
 library("reticulate")
