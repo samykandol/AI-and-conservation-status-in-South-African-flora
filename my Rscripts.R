@@ -55,8 +55,11 @@ class_labtw <- iucnn_prepare_labels(train_lab,geo_feat,level="broad")
 ## Model checks
 
 modelcheck_1 <- iucnn_train_model(x=geo_feat,lab=class_labfive, path_to_output= "iucnn_model_1")
+plot(modelcheck_1)
 modelchech_2 <- iucnn_train_model(x=climate_feat, lab=class_labfive, path_to_output= "iucnn_model_2")
+plot(modelcheck_2)
 modelchech_3 <- iucnn_train_model(x=allfeat, lab=class_labfive, path_to_output= "iucnn_model_3")
+plot(model_check3)
 
 #Geographic_features
 
@@ -83,7 +86,7 @@ geography <- iucnn_modeltest(
   rescale_features = FALSE,
   init_logfile = TRUE,
   recycle_settings = FALSE
-  init_logfile = TRUE)
+  )
 
 #Best model selection
 
@@ -160,8 +163,11 @@ plot(allfeatbestM)
 ## Model checks
 
 modelcheck_4 <- iucnn_train_model(x=geo_feat,lab=class_labtw, path_to_output= "iucnn_model_4")
+plot(model_check4)
 modelchech_5 <- iucnn_train_model(x=climate_feat, lab=class_labtw, path_to_output= "iucnn_model_5")
+plot(model_check5)
 modelchech_6 <- iucnn_train_model(x=allfeat, lab=class_labtw, path_to_output= "iucnn_model_6")
+plot(model_check6)
 
 #Geographic_features
 geography2 <- iucnn_modeltest(
